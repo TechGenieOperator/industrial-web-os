@@ -1,0 +1,38 @@
+{
+  "name": "industrial_web_os",
+
+  "agents": [
+    "industrial_business_research_a",
+    "industrial_website_architect"
+  ],
+
+  "tasks": [
+    {
+      "name": "research_company",
+
+      "description": "Research the company {company_name} using the website {website_url}. Return ONLY valid JSON. Gather factual information about the company, services, products, target audience, pain points, competitors, strengths, weaknesses, opportunities, trust factors, unique selling propositions, website strengths, website weaknesses, SEO observations, content opportunities, and lead generation opportunities. Do not return markdown, explanations, commentary, or prose.",
+
+      "expected_output": "Return ONLY valid JSON in this exact format: {\"company_name\":\"\",\"website_url\":\"\",\"company_summary\":\"\",\"industry\":\"\",\"services\":[],\"target_audience\":[],\"pain_points\":[],\"competitors\":[],\"strengths\":[],\"weaknesses\":[],\"opportunities\":[],\"unique_selling_propositions\":[],\"trust_signals\":[],\"website_analysis\":{\"current_strengths\":[],\"current_weaknesses\":[],\"missing_pages\":[],\"conversion_issues\":[],\"seo_issues\":[]},\"recommended_ctas\":[],\"content_opportunities\":[],\"verification\":{\"confirmed_facts\":[],\"assumptions\":[],\"requires_client_confirmation\":[]}}",
+
+      "agent": "industrial_business_research_a"
+    },
+
+    {
+      "name": "create_website_architecture",
+
+      "description": "Using the JSON output from the research_company task as the only source of truth, create a complete industrial B2B website architecture. Do not invent company facts, certifications, statistics, awards, project counts, customer counts, client names, safety metrics, office locations, partnerships, testimonials, case studies, or achievements. If information cannot be verified from the research data, place it under requires_client_confirmation. Return ONLY valid JSON. Every trust element must include a verification status. Allowed statuses are confirmed, inferred, and requires_client_confirmation.",
+
+      "expected_output": "Return ONLY valid JSON in this exact format: {\"sitemap\":[],\"navigation\":[],\"cta_strategy\":[],\"trust_elements\":[{\"type\":\"\",\"placement\":\"\",\"status\":\"\",\"description\":\"\"}],\"seo_recommendations\":[],\"homepage\":{\"hero\":{},\"sections\":[]},\"pages\":{\"home\":{},\"about\":{},\"services\":{},\"projects\":{},\"resources\":{},\"contact\":{}},\"verification\":{\"confirmed_facts_used\":[],\"assumptions\":[],\"requires_client_confirmation\":[]}}",
+
+      "agent": "industrial_website_architect"
+    }
+  ],
+
+  "process": "sequential",
+
+  "verbose": true,
+
+  "memory": false,
+
+  "inputs": {}
+}
