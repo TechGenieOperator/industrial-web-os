@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "company_name": "Apex Cordset Technologies (Pty) Ltd",
+    "website_url": "https://www.apex-leads.co.za/",
+    "date_researched": "2026-10-16",
+    "research_method": "primary_website_analysis"
+  },
+  "research": {
+    "company_description": "Apex Cordset Technologies (Pty) Ltd is a manufacturer specializing in power cords, household electrical wiring accessories, and detonator cable assemblies, serving industries such as consumer electronics, retail, and mining.",
+    "core_business": "Manufacturing of electrical components and detonator cable assemblies",
+    "products": [
+      {
+        "name": "Plugs and Connectors",
+        "description": "High-quality plugs and connectors with a daily production capacity of 54,000 units",
+        "markets": ["international", "South African"],
+        "evidence_status": "confirmed"
+      },
+      {
+        "name": "Lawnmower Extension Cords",
+        "description": "Extension cords designed for various lawnmower models",
+        "evidence_status": "confirmed"
+      },
+      {
+        "name": "Cordsets, Extensions and Accessories",
+        "description": "Complete cord assemblies with power cords and connector plugs, including extension cords, cord reels, adapters, splitters, and cable management solutions",
+        "evidence_status": "confirmed"
+      },
+      {
+        "name": "Reels",
+        "description": "Manufacturers of the Kosmo Reel for households and businesses",
+        "evidence_status": "confirmed"
+      },
+      {
+        "name": "Detonator Cable Assembly",
+        "description": "Electronic detonator wire harnesses manufactured to customer specifications for the mining sector",
+        "evidence_status": "confirmed"
+      }
+    ],
+    "industries_served": ["consumer electronics", "retail", "mining"],
+    "core_values": [
+      "Own it (Accountability)",
+      "Make a Plan (Goal-oriented planning)",
+      "Get it Done (Determination)",
+      "Do it Right the First Time (Efficiency)",
+      "Addicted to Excellence (Quality)",
+      "Keep your promise (Integrity)"
+    ],
+    "business_philosophy": "\"Connections for Life\" – delivering exceptional products and nurturing enduring relationships",
+    "inferred_facts": [],
+    "requires_client_confirmation": ["about_us_content", "certifications", "sustainability_practices"]
+  },
+  "research_metrics": {
+    "status": "completed",
+    "scope": "primary_website",
+    "coverage": "limited",
+    "pages": [
+      {
+        "url": "https://www.apex-leads.co.za/",
+        "analysis_status": "analyzed",
+        "page_type": "homepage",
+        "retrieval_status": "success"
+      },
+      {
+        "url": "https://www.apex-leads.co.za/about-us",
+        "analysis_status": "failed",
+        "page_type": "about",
+        "retrieval_status": "not_found"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.apex-leads.co.za/",
+        "name": "Apex Cordset Technologies Official Website",
+        "source_type": "primary",
+        "publisher": "Apex Cordset Technologies",
+        "retrieval_date": "2026-10-16",
+        "used_for_claims": [
+          "company_description",
+          "core_business",
+          "products",
+          "industries_served",
+          "core_values",
+          "business_philosophy"
+        ]
+      }
+    ],
+    "crawl_performance": {},
+    "content_quality": {},
+    "evidence_quality": {
+      "source_diversity": "single_source",
+      "direct_quotation_coverage": "partial"
+    },
+    "research_quality": {
+      "claim_validation": "medium"
+    },
+    "execution": {},
+    "limitations": {
+      "missing_sections": ["about_us", "certifications", "sustainability", "projects"],
+      "depth": "single_page",
+      "unverified_claims": ["about_us_content"]
+    },
+    "audit": {
+      "unavailable_fields": [
+        "crawl_performance.duration",
+        "crawl_performance.response_size", 
+        "content_quality.readability_score",
+        "website_analysis.tech_stack",
+        "website_analysis.page_speed",
+        "architecture.routing",
+        "verification.certificates",
+        "patterns.content_hierarchy",
+        "patterns.navigation",
+        "outcomes.conversion_paths"
+      ]
+    }
+  },
+  "website_analysis": {},
+  "architecture": {},
+  "verification": {
+    "confirmed_facts": [
+      {
+        "fact": "Company description and core business",
+        "source": "https://www.apex-leads.co.za/",
+        "category": "company_overview"
+      },
+      {
+        "fact": "Product offerings and specifications",
+        "source": "https://www.apex-leads.co.za/",
+        "category": "products"
+      },
+      {
+        "fact": "Industries served",
+        "source": "https://www.apex-leads.co.za/",
+        "category": "market_segments"
+      },
+      {
+        "fact": "Core values and business philosophy",
+        "source": "https://www.apex-leads.co.za/",
+        "category": "company_culture"
+      }
+    ],
+    "inferred_facts": [
+      {
+        "fact": "Manufacturing capabilities include specialized safety components for mining",
+        "basis": "product offering includes detonator cable assemblies",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      {
+        "assumption": "Company operates primarily in South African market",
+        "basis": ".co.za domain and local manufacturing references",
+        "confidence": "high"
+      }
+    ],
+    "contradictions": [],
+    "requires_client_confirmation": [
+      "About Us page content",
+      "Certifications held",
+      "Sustainability practices",
+      "Project history and case studies"
+    ]
+  },
+  "patterns": {},
+  "business_intelligence": {
+    "strategic_insights": [
+      "Positioned as a high-volume manufacturer with specialized mining applications",
+      "Strong emphasis on quality and customer relationships",
+      "Diverse product portfolio serving both consumer and industrial markets"
+    ],
+    "competencies": [
+      "High-volume manufacturing capabilities",
+      "Specialization in safety-critical mining components",
+      "Broad range of electrical connectivity solutions"
+    ]
+  },
+  "outcomes": {},
+  "memory": {}
+}

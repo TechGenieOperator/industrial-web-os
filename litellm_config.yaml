@@ -1,29 +1,34 @@
 model_list:
+
   - model_name: industrial-primary
     litellm_params:
       model: openrouter/google/gemini-2.5-flash
       api_key: os.environ/OPENROUTER_API_KEY
       api_base: https://openrouter.ai/api/v1
-      timeout: 120
-      max_retries: 1
+      max_tokens: 2500
+      temperature: 0.2
+      timeout: 180
 
   - model_name: industrial-fallback-1
     litellm_params:
       model: openrouter/deepseek/deepseek-chat
       api_key: os.environ/OPENROUTER_API_KEY
       api_base: https://openrouter.ai/api/v1
-      timeout: 120
-      max_retries: 1
+      max_tokens: 2500
+      temperature: 0.2
+      timeout: 180
 
   - model_name: industrial-fallback-2
     litellm_params:
       model: openrouter/openrouter/auto
       api_key: os.environ/OPENROUTER_API_KEY
       api_base: https://openrouter.ai/api/v1
-      timeout: 120
-      max_retries: 1
+      max_tokens: 2500
+      temperature: 0.2
+      timeout: 180
 
 router_settings:
+
   fallbacks:
     - industrial-primary:
         - industrial-fallback-1
@@ -31,17 +36,23 @@ router_settings:
 
   context_window_fallbacks:
     - industrial-primary:
+        - industrial-fallback-1
         - industrial-fallback-2
 
   num_retries: 1
-  retry_after: 2
+
   allowed_fails: 2
+
   cooldown_time: 30
 
 litellm_settings:
+
+  request_timeout: 180
+
+  set_verbose: true
+
   drop_params: true
-  request_timeout: 120
-  set_verbose: false
 
 general_settings:
+
   master_key: os.environ/LITELLM_MASTER_KEY

@@ -1,0 +1,201 @@
+{
+  "sitemap": [
+    {
+      "url": "/",
+      "title": "Home",
+      "description": "Margate Engineering homepage featuring services and trust signals"
+    },
+    {
+      "url": "/about",
+      "title": "About Us",
+      "description": "Company history and values"
+    },
+    {
+      "url": "/services",
+      "title": "Services",
+      "description": "Industrial services offered including manufacturing and security solutions"
+    },
+    {
+      "url": "/contact",
+      "title": "Contact",
+      "description": "Contact form and location information"
+    }
+  ],
+
+  "navigation": [
+    {
+      "title": "Home",
+      "url": "/"
+    },
+    {
+      "title": "About",
+      "url": "/about"
+    },
+    {
+      "title": "Services",
+      "url": "/services"
+    },
+    {
+      "title": "Contact",
+      "url": "/contact"
+    }
+  ],
+
+  "cta_strategy": [
+    {
+      "type": "Quote Request",
+      "placement": "Services Pages",
+      "text": "Request Custom Quote",
+      "status": "requires_client_confirmation"
+    },
+    {
+      "type": "Contact",
+      "placement": "Header/Footer",
+      "text": "Contact Our Team",
+      "status": "confirmed",
+      "evidence": "Existing website analysis shows contact page"
+    }
+  ],
+
+  "trust_elements": [
+    {
+      "type": "Established Since 1958",
+      "placement": "Homepage/About",
+      "status": "requires_client_confirmation",
+      "description": "Family-owned business heritage",
+      "evidence": null
+    },
+    {
+      "type": "Service Listings",
+      "placement": "Services Page",
+      "status": "requires_client_confirmation",
+      "description": "Detailed service offerings",
+      "evidence": null
+    }
+  ],
+
+  "seo_recommendations": [
+    {
+      "type": "Service Pages",
+      "description": "Create dedicated pages for each confirmed service",
+      "status": "inferred"
+    },
+    {
+      "type": "Local SEO",
+      "description": "Optimize for industrial engineering searches in Margate and KZN",
+      "status": "inferred"
+    }
+  ],
+
+  "homepage": {
+    "hero_section": {
+      "title": "Industrial Manufacturing & Security Solutions",
+      "subtitle": "Engineering expertise for industrial and commercial clients",
+      "cta": {
+        "text": "Explore Our Services",
+        "url": "/services"
+      }
+    },
+
+    "service_highlights": {
+      "title": "Capabilities",
+      "services": [
+        {
+          "name": "Custom Manufacturing",
+          "url": "/services/custom-manufacturing"
+        },
+        {
+          "name": "Security Solutions",
+          "url": "/services/security-solutions"
+        }
+      ]
+    },
+
+    "trust_section": {
+      "title": "Why Choose Us",
+      "elements": [
+        {
+          "type": "Generations in Business",
+          "details": "Family-owned business"
+        },
+        {
+          "type": "Multi-Disciplinary",
+          "details": "Manufacturing and security expertise"
+        }
+      ]
+    }
+  },
+
+  "pages": {
+    "about": {
+      "sections": [
+        {
+          "type": "History",
+          "content": "Founded as a family business in Margate"
+        },
+        {
+          "type": "Capabilities",
+          "content": "Industrial manufacturing and security systems specialists"
+        }
+      ]
+    },
+
+    "services": {
+      "sections": [
+        {
+          "type": "Service List",
+          "items": [
+            {
+              "name": "Custom Manufacturing",
+              "description": "Tailored industrial fabrication"
+            },
+            {
+              "name": "Security Solutions",
+              "description": "Commercial and industrial protection"
+            }
+          ]
+        }
+      ]
+    }
+  },
+
+  "implementation_priority": {
+    "phase_1_mvp": [
+      "Homepage",
+      "About",
+      "Core Services",
+      "Contact"
+    ],
+    "phase_2_growth": [
+      "Service Detail Pages",
+      "Gallery"
+    ],
+    "phase_3_authority": [
+      "Case Studies",
+      "Certifications",
+      "Industry Resources"
+    ]
+  },
+
+  "verification": {
+    "confirmed_facts_used": [
+      "Company name",
+      "Service categories from research"
+    ],
+    "inferred_recommendations": [
+      "Service page expansion",
+      "Local SEO focus"
+    ],
+    "requires_client_confirmation": [
+      "Established Since 1958",
+      "Service listings",
+      "Case studies",
+      "Certifications"
+    ],
+    "research_confidence_used": "Medium",
+    "research_limitations": [
+      "Limited historical detail available",
+      "No client or project specifics confirmed"
+    ]
+  }
+}

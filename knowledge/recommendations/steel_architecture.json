@@ -1,0 +1,60 @@
+{
+  "recommendation_id": "steel_architecture",
+  "industry": "Steel",
+  "confidence": "preliminary",
+  "evidence": {
+    "industry_companies_analyzed": 1,
+    "companies": [
+      "Macsteel"
+    ],
+    "cross_industry_companies_analyzed": 1
+  },
+  "recommended_architecture": {
+    "pages": [
+      {
+        "value": "Contact",
+        "company_count": 1,
+        "source": "industry"
+      },
+      {
+        "value": "Home",
+        "company_count": 1,
+        "source": "industry"
+      },
+      {
+        "value": "Projects",
+        "company_count": 1,
+        "source": "industry"
+      },
+      {
+        "value": "Services",
+        "company_count": 1,
+        "source": "industry"
+      }
+    ],
+    "services_to_feature": [
+      {
+        "value": "Fabrication",
+        "company_count": 1,
+        "source": "industry"
+      },
+      {
+        "value": "Steel Distribution",
+        "company_count": 1,
+        "source": "industry"
+      }
+    ],
+    "ctas": [],
+    "trust_elements": [],
+    "seo_actions": []
+  },
+  "guardrails": {
+    "treat_as_proven_best_practice": false,
+    "requires_company_specific_research": true,
+    "note": "Recommendations are preliminary because fewer than three companies have been analyzed in this industry."
+  },
+  "memory": {
+    "generated_at": "2026-10-15T20:24:44.325172+00:00",
+    "schema_version": "1.0"
+  }
+}

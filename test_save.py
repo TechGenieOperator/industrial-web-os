@@ -1,8 +1,33 @@
-from tools.save_company import save_company
+from tools.save_company import (
+    create_company_record,
+    save_company
+)
 
-sample = {
-    "company_name": "Macsteel",
-    "industry": "Steel"
-}
+record = create_company_record(
+    company_name="Macsteel",
+    website_url="https://www.macsteel.co.za",
+    industry="Steel",
+    research={
+        "services": [
+            "Steel Distribution",
+            "Fabrication"
+        ]
+    },
+    architecture={
+        "sitemap": [
+            "Home",
+            "Services",
+            "Projects",
+            "Contact"
+        ]
+    },
+    verification={
+        "confirmed_facts": [
+            "Company Name"
+        ]
+    }
+)
 
-print(save_company(sample))
+saved = save_company(record)
+
+print(saved)

@@ -1,0 +1,42 @@
+{
+  "industry": "Steel",
+  "companies_analyzed": 1,
+  "companies": [
+    "Macsteel"
+  ],
+  "common_services": [
+    {
+      "value": "Steel Distribution",
+      "company_count": 1
+    },
+    {
+      "value": "Fabrication",
+      "company_count": 1
+    }
+  ],
+  "common_pages": [
+    {
+      "value": "Home",
+      "company_count": 1
+    },
+    {
+      "value": "Services",
+      "company_count": 1
+    },
+    {
+      "value": "Projects",
+      "company_count": 1
+    },
+    {
+      "value": "Contact",
+      "company_count": 1
+    }
+  ],
+  "common_ctas": [],
+  "common_trust_elements": [],
+  "common_seo_recommendations": [],
+  "memory": {
+    "last_updated": "2026-10-15T19:10:56.636764+00:00",
+    "schema_version": "1.0"
+  }
+}

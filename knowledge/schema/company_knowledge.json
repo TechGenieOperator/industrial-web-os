@@ -1,13 +1,244 @@
 {
-  "company_name": "",
-  "website_url": "",
-  "industry": "",
-  "research": {},
-  "architecture": {},
-  "verification": {},
-  "patterns": {},
   "metadata": {
-    "created_at": "",
-    "version": "1.0"
+    "company_id": "",
+    "company_name": "",
+    "website_url": "",
+    "industry": "",
+    "sub_industry": "",
+    "country": "",
+    "region": "",
+    "date_analyzed": "",
+    "schema_version": "2.0",
+    "record_version": "1.0"
+  },
+
+  "research": {
+    "company_summary": "",
+    "services": [],
+    "products": [],
+    "target_audience": [],
+    "pain_points": [],
+    "competitors": [],
+    "strengths": [],
+    "weaknesses": [],
+    "opportunities": [],
+    "unique_selling_propositions": [],
+    "trust_signals": []
+  },
+
+  "research_metrics": {
+    "schema_version": "2.0",
+
+    "status": {
+      "state": "",
+      "completed": false,
+      "partial_reason": "",
+      "errors": [],
+      "warnings": []
+    },
+
+    "scope": {
+      "requested_url": "",
+      "final_url": "",
+      "domain": "",
+      "research_mode": "",
+      "crawl_depth_requested": 0,
+      "crawl_depth_reached": 0,
+      "maximum_pages_requested": 0,
+      "pages_discovered": 0,
+      "pages_attempted": 0,
+      "pages_analyzed": 0,
+      "pages_skipped": 0,
+      "external_sources_analyzed": 0
+    },
+
+    "coverage": {
+      "coverage_score": 0,
+      "coverage_level": "",
+      "page_types_found": [],
+      "page_types_missing": [],
+      "sections_analyzed": [],
+      "sections_missing": [],
+      "languages_encountered": [],
+      "regions_encountered": []
+    },
+
+    "pages": [
+      {
+        "url": "",
+        "final_url": "",
+        "page_type": "",
+        "title": "",
+        "crawl_depth": 0,
+        "http_status": null,
+        "content_extracted": false,
+        "content_length_characters": 0,
+        "relevance_score": 0,
+        "analysis_status": "",
+        "skip_reason": ""
+      }
+    ],
+
+    "sources": [
+      {
+        "source_type": "",
+        "name": "",
+        "url": "",
+        "publisher": "",
+        "retrieved_at": "",
+        "is_primary_source": false,
+        "relevance_score": 0,
+        "credibility_score": 0,
+        "used_for_claims": []
+      }
+    ],
+
+    "crawl_performance": {
+      "started_at": "",
+      "completed_at": "",
+      "duration_seconds": 0,
+      "discovery_duration_seconds": 0,
+      "extraction_duration_seconds": 0,
+      "analysis_duration_seconds": 0,
+      "average_seconds_per_page": 0,
+      "successful_requests": 0,
+      "failed_requests": 0,
+      "redirects_followed": 0,
+      "timeouts": 0,
+      "rate_limit_events": 0,
+      "robots_blocked_pages": 0,
+      "authentication_blocked_pages": 0
+    },
+
+    "content_quality": {
+      "total_content_characters": 0,
+      "duplicate_pages_detected": 0,
+      "thin_content_pages": 0,
+      "unreadable_pages": 0,
+      "dynamic_content_limitations": [],
+      "documents_analyzed": 0,
+      "structured_data_detected": [],
+      "content_freshness": {
+        "dated_pages_found": 0,
+        "newest_date_found": "",
+        "oldest_date_found": "",
+        "undated_pages": 0
+      }
+    },
+
+    "evidence_quality": {
+      "claims_generated": 0,
+      "claims_with_evidence": 0,
+      "claims_without_evidence": 0,
+      "confirmed_claims": 0,
+      "inferred_claims": 0,
+      "claims_requiring_confirmation": 0,
+      "evidence_coverage_score": 0,
+      "contradictions_found": 0,
+      "contradictions": []
+    },
+
+    "research_quality": {
+      "overall_score": 0,
+      "confidence_score": 0,
+      "completeness_score": 0,
+      "source_quality_score": 0,
+      "evidence_score": 0,
+      "freshness_score": 0,
+      "quality_level": "",
+      "confidence_level": "",
+      "scoring_notes": []
+    },
+
+    "execution": {
+      "crew_run_id": "",
+      "trace_id": "",
+      "research_agent": "",
+      "model_requested": "",
+      "model_used": "",
+      "fallback_used": false,
+      "fallback_chain": [],
+      "llm_requests": 0,
+      "tool_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "estimated_cost": null,
+      "retry_count": 0
+    },
+
+    "limitations": {
+      "known_limitations": [],
+      "blocked_content": [],
+      "unverified_areas": [],
+      "recommended_follow_up_pages": [],
+      "recommended_external_sources": [],
+      "requires_manual_review": false
+    },
+
+    "audit": {
+      "metrics_collected_at": "",
+      "metrics_collector": "",
+      "automatically_measured_fields": [],
+      "agent_reported_fields": [],
+      "unavailable_fields": []
+    }
+  },
+
+  "website_analysis": {
+    "current_strengths": [],
+    "current_weaknesses": [],
+    "missing_pages": [],
+    "conversion_issues": [],
+    "seo_issues": []
+  },
+
+  "architecture": {
+    "sitemap": [],
+    "navigation": [],
+    "cta_strategy": [],
+    "trust_elements": [],
+    "seo_recommendations": [],
+    "homepage": {},
+    "pages": {}
+  },
+
+  "verification": {
+    "confirmed_facts": [],
+    "inferred_facts": [],
+    "assumptions": [],
+    "requires_client_confirmation": [],
+    "contradictions": []
+  },
+
+  "patterns": {
+    "services": [],
+    "pages": [],
+    "trust_elements": [],
+    "ctas": [],
+    "seo_strategies": []
+  },
+
+  "business_intelligence": {
+    "lead_generation_opportunities": [],
+    "content_opportunities": [],
+    "recommended_next_steps": []
+  },
+
+  "outcomes": {
+    "proposal_created": false,
+    "website_created": false,
+    "client_response": "",
+    "won_project": null,
+    "client_value_score": null,
+    "notes": []
+  },
+
+  "memory": {
+    "saved_at": "",
+    "last_updated": "",
+    "run_count": 1,
+    "previous_record_version": "",
+    "change_summary": []
   }
 }

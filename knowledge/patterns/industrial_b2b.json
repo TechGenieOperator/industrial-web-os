@@ -1,0 +1,51 @@
+{
+  "pattern_id": "industrial_b2b",
+  "scope": "cross_industry",
+  "confidence": "preliminary",
+  "minimum_company_count": 1,
+  "industries_analyzed": [
+    {
+      "industry": "Steel",
+      "companies_analyzed": 1
+    }
+  ],
+  "total_companies_analyzed": 1,
+  "patterns": {
+    "common_services": [
+      {
+        "value": "Steel Distribution",
+        "company_count": 1
+      },
+      {
+        "value": "Fabrication",
+        "company_count": 1
+      }
+    ],
+    "common_pages": [
+      {
+        "value": "Home",
+        "company_count": 1
+      },
+      {
+        "value": "Services",
+        "company_count": 1
+      },
+      {
+        "value": "Projects",
+        "company_count": 1
+      },
+      {
+        "value": "Contact",
+        "company_count": 1
+      }
+    ],
+    "common_ctas": [],
+    "common_trust_elements": [],
+    "common_seo_recommendations": []
+  },
+  "usage_note": "Treat these as preliminary observations until more companies are analyzed.",
+  "memory": {
+    "last_updated": "2026-10-15T20:10:16.090535+00:00",
+    "schema_version": "1.0"
+  }
+}

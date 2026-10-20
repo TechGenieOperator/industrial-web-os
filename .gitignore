@@ -1,5 +1,44 @@
+# Environment variables and secrets
 .env
+.env.*
+!.env.example
+
+# Python
 __pycache__/
-.DS_Store
-report.md
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# CrewAI
 .crewai/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+
+# Reports and generated files
+report.md
+
+# IDE files
+.vscode/
+.idea/
+
+# Python test cache
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/

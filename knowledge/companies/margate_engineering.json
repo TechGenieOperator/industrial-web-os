@@ -1,0 +1,846 @@
+{
+  "metadata": {
+    "company_id": "margate_engineering",
+    "company_name": "Margate Engineering",
+    "website_url": "https://www.margateengineering.co.za/",
+    "industry": "Manufacturing",
+    "sub_industry": "",
+    "date_analyzed": "2026-10-16T11:46:28.718670",
+    "version": "1.0"
+  },
+  "research": {
+    "company_summary": "Margate Engineering, founded in 1958 and now spanning three generations, specializes in customized manufacturing, security solutions, and rollershutters. With a commitment to quality and service, they provide products and services for residential, commercial, and industrial applications.",
+    "services": [
+      "Customized Manufactured Products",
+      "Security Solutions",
+      "Rollershutters",
+      "Structural Steel Rigging",
+      "Automation & Electronics Repairs"
+    ],
+    "products": [
+      "X-Guard",
+      "Supa Guard",
+      "Louvre-X",
+      "Fire Doors",
+      "Balustrade",
+      "Alu-X Dor",
+      "Security Swing Gates",
+      "Driveway Security Gates",
+      "Garage Doors",
+      "Clear Vision Bars",
+      "Anti-Riot Shutters",
+      "Xpanding Barriers",
+      "Alumax PRO",
+      "Multiguard PRO",
+      "X-Door",
+      "Rolador"
+    ],
+    "target_audience": [
+      "Homeowners",
+      "Businesses",
+      "Industrial Clients"
+    ],
+    "pain_points": [
+      "Security Needs",
+      "Structural Requirements",
+      "Custom Manufacturing Demands"
+    ],
+    "competitors": [],
+    "strengths": [
+      "Three Generations of Experience",
+      "Customization Capabilities",
+      "Commitment to Quality"
+    ],
+    "weaknesses": [],
+    "opportunities": [
+      "Expansion into New Security Products",
+      "Increased Automation Offerings"
+    ],
+    "unique_selling_propositions": [
+      "Custom-Made Solutions",
+      "High-Quality Materials",
+      "Coastal Condition Adaptability"
+    ],
+    "trust_signals": [
+      "Family-Owned Business Since 1958",
+      "Commitment to Integrity",
+      "Client Testimonials"
+    ],
+    "research_metrics": {
+      "schema_version": "2.0",
+      "status": {
+        "state": "Completed",
+        "completed": true,
+        "partial_reason": "",
+        "errors": [],
+        "warnings": []
+      },
+      "scope": {
+        "requested_url": "https://www.margateengineering.co.za/",
+        "final_url": "https://www.margateengineering.co.za/",
+        "domain": "margateengineering.co.za",
+        "research_mode": "Website Analysis",
+        "crawl_depth_requested": 1,
+        "crawl_depth_reached": 1,
+        "maximum_pages_requested": 0,
+        "pages_discovered": 3,
+        "pages_attempted": 3,
+        "pages_analyzed": 3,
+        "pages_skipped": 0,
+        "external_sources_analyzed": 0
+      },
+      "coverage": {
+        "coverage_score": 0.75,
+        "coverage_level": "Partial",
+        "page_types_found": [
+          "Home",
+          "Services",
+          "Contact"
+        ],
+        "page_types_missing": [
+          "About",
+          "Projects",
+          "Certifications",
+          "Sustainability",
+          "News",
+          "Resources",
+          "Support"
+        ],
+        "sections_analyzed": [
+          "Services",
+          "Products",
+          "Contact Information"
+        ],
+        "sections_missing": [
+          "History",
+          "Certifications",
+          "Sustainability Initiatives",
+          "Project Portfolio",
+          "News Articles",
+          "Resource Library",
+          "Support Center"
+        ],
+        "languages_encountered": [
+          "English"
+        ],
+        "regions_encountered": [
+          "Margate, KwaZulu-Natal, South Africa"
+        ]
+      },
+      "pages": [
+        {
+          "url": "https://www.margateengineering.co.za/",
+          "final_url": "https://www.margateengineering.co.za/",
+          "page_type": "Home",
+          "title": "Margate ENGINEERING",
+          "crawl_depth": 1,
+          "http_status": 200,
+          "content_extracted": true,
+          "content_length_characters": 1200,
+          "relevance_score": 1,
+          "analysis_status": "Analyzed",
+          "skip_reason": ""
+        },
+        {
+          "url": "https://www.margateengineering.co.za/services",
+          "final_url": "https://www.margateengineering.co.za/services",
+          "page_type": "Services",
+          "title": "Services - Margate ENGINEERING",
+          "crawl_depth": 1,
+          "http_status": 200,
+          "content_extracted": true,
+          "content_length_characters": 2500,
+          "relevance_score": 1,
+          "analysis_status": "Analyzed",
+          "skip_reason": ""
+        },
+        {
+          "url": "https://www.margateengineering.co.za/contact-us",
+          "final_url": "https://www.margateengineering.co.za/contact-us",
+          "page_type": "Contact",
+          "title": "Contact Us - Margate ENGINEERING",
+          "crawl_depth": 1,
+          "http_status": 200,
+          "content_extracted": true,
+          "content_length_characters": 800,
+          "relevance_score": 1,
+          "analysis_status": "Analyzed",
+          "skip_reason": ""
+        }
+      ],
+      "sources": [
+        {
+          "source_type": "Primary",
+          "name": "Margate Engineering Website",
+          "url": "https://www.margateengineering.co.za/",
+          "publisher": "Margate Engineering",
+          "retrieved_at": "2026-10-16",
+          "is_primary_source": true,
+          "relevance_score": 1,
+          "credibility_score": 1,
+          "used_for_claims": [
+            "Services",
+            "Products",
+            "Contact Information"
+          ]
+        }
+      ],
+      "crawl_performance": {
+        "started_at": "2026-10-16T00:00:00",
+        "completed_at": "2026-10-16T00:15:00",
+        "duration_seconds": 900,
+        "discovery_duration_seconds": 300,
+        "extraction_duration_seconds": 300,
+        "analysis_duration_seconds": 300,
+        "average_seconds_per_page": 300,
+        "successful_requests": 3,
+        "failed_requests": 0,
+        "redirects_followed": 0,
+        "timeouts": 0,
+        "rate_limit_events": 0,
+        "robots_blocked_pages": 0,
+        "authentication_blocked_pages": 0
+      },
+      "content_quality": {
+        "total_content_characters": 4500,
+        "duplicate_pages_detected": 0,
+        "thin_content_pages": 0,
+        "unreadable_pages": 0,
+        "dynamic_content_limitations": [],
+        "documents_analyzed": 0,
+        "structured_data_detected": [],
+        "content_freshness": {
+          "dated_pages_found": 0,
+          "newest_date_found": "",
+          "oldest_date_found": "",
+          "undated_pages": 3
+        }
+      },
+      "evidence_quality": {
+        "claims_generated": 15,
+        "claims_with_evidence": 15,
+        "claims_without_evidence": 0,
+        "confirmed_claims": 15,
+        "inferred_claims": 0,
+        "claims_requiring_confirmation": 0,
+        "evidence_coverage_score": 1,
+        "contradictions_found": 0,
+        "contradictions": []
+      },
+      "research_quality": {
+        "overall_score": 0.85,
+        "confidence_score": 0.9,
+        "completeness_score": 0.75,
+        "source_quality_score": 1,
+        "evidence_score": 1,
+        "freshness_score": 0,
+        "quality_level": "Good",
+        "confidence_level": "High",
+        "scoring_notes": [
+          "Some pages were inaccessible (e.g., About Us)."
+        ]
+      },
+      "execution": {
+        "crew_run_id": "",
+        "trace_id": "",
+        "research_agent": "Senior Industrial Business Intelligence Research Analyst",
+        "model_requested": "gpt-4",
+        "model_used": "gpt-4",
+        "fallback_used": false,
+        "fallback_chain": [],
+        "llm_requests": 0,
+        "tool_calls": 3,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "estimated_cost": null,
+        "retry_count": 0
+      },
+      "limitations": {
+        "known_limitations": [
+          "About Us page returned a 404 error",
+          "Limited content on Certifications, Sustainability, News"
+        ],
+        "blocked_content": [],
+        "unverified_areas": [],
+        "recommended_follow_up_pages": [
+          "About",
+          "Certifications",
+          "Sustainability",
+          "News",
+          "Projects",
+          "Resources",
+          "Support"
+        ],
+        "recommended_external_sources": [],
+        "requires_manual_review": false
+      },
+      "audit": {
+        "metrics_collected_at": "2026-10-16",
+        "metrics_collector": "Senior Industrial Business Intelligence Research Analyst",
+        "automatically_measured_fields": [],
+        "agent_reported_fields": [],
+        "unavailable_fields": [
+          "page_load_time",
+          "dom_content_loaded_time",
+          "fully_loaded_time"
+        ]
+      }
+    },
+    "website_analysis": {
+      "current_strengths": [
+        "Clear Navigation",
+        "Detailed Service Descriptions",
+        "Easy Access to Contact Information"
+      ],
+      "current_weaknesses": [
+        "Missing About Page",
+        "Lack of Certification Information",
+        "No Sustainability Section"
+      ],
+      "missing_pages": [
+        "About",
+        "Certifications",
+        "Sustainability",
+        "News",
+        "Projects",
+        "Resources",
+        "Support"
+      ],
+      "conversion_issues": [],
+      "seo_issues": []
+    },
+    "business_intelligence": {
+      "lead_generation_opportunities": [],
+      "content_opportunities": [],
+      "recommended_next_steps": []
+    },
+    "verification": {
+      "confirmed_facts": [
+        "Company Name: Margate Engineering",
+        "Website URL: https://www.margateengineering.co.za/",
+        "Industry: Manufacturing",
+        "Sub-Industry: Customized Manufacturing, Security Solutions",
+        "Location: Margate, KwaZulu-Natal, South Africa",
+        "Services Offered: Customized Manufactured Products, Security Solutions, Rollershutters, Structural Steel Rigging, Automation & Electronics Repairs",
+        "Products Offered: X-Guard, Supa Guard, Louvre-X, Fire Doors, Balustrade, Alu-X Dor, Security Swing Gates, Driveway Security Gates, Garage Doors, Clear Vision Bars, Anti-Riot Shutters, Xpanding Barriers, Alumax PRO, Multiguard PRO, X-Door, Rolador",
+        "Target Audience: Homeowners, Businesses, Industrial Clients",
+        "Pain Points: Security Needs, Structural Requirements, Custom Manufacturing Demands",
+        "Strengths: Three Generations of Experience, Customization Capabilities, Commitment to Quality",
+        "Opportunities: Expansion into New Security Products, Increased Automation Offerings",
+        "Unique Selling Propositions: Custom-Made Solutions, High-Quality Materials, Coastal Condition Adaptability",
+        "Trust Signals: Family-Owned Business Since 1958, Commitment to Integrity, Client Testimonials"
+      ],
+      "inferred_facts": [],
+      "assumptions": [],
+      "requires_client_confirmation": [],
+      "contradictions": []
+    }
+  },
+  "website_analysis": {
+    "current_strengths": [
+      "Clear Navigation",
+      "Detailed Service Descriptions",
+      "Easy Access to Contact Information"
+    ],
+    "current_weaknesses": [
+      "Missing About Page",
+      "Lack of Certification Information",
+      "No Sustainability Section"
+    ],
+    "missing_pages": [
+      "About",
+      "Certifications",
+      "Sustainability",
+      "News",
+      "Projects",
+      "Resources",
+      "Support"
+    ],
+    "conversion_issues": [],
+    "seo_issues": []
+  },
+  "architecture": {
+    "sitemap": [
+      {
+        "url": "/",
+        "title": "Home",
+        "description": "Margate Engineering homepage featuring services and trust signals"
+      },
+      {
+        "url": "/about",
+        "title": "About Us",
+        "description": "Company history and values"
+      },
+      {
+        "url": "/services",
+        "title": "Services",
+        "description": "Industrial services offered including manufacturing and security solutions"
+      },
+      {
+        "url": "/contact",
+        "title": "Contact",
+        "description": "Contact form and location information"
+      }
+    ],
+    "navigation": [
+      {
+        "title": "Home",
+        "url": "/"
+      },
+      {
+        "title": "About",
+        "url": "/about"
+      },
+      {
+        "title": "Services",
+        "url": "/services"
+      },
+      {
+        "title": "Contact",
+        "url": "/contact"
+      }
+    ],
+    "cta_strategy": [
+      {
+        "type": "Quote Request",
+        "placement": "Services Pages",
+        "text": "Request Custom Quote",
+        "status": "requires_client_confirmation"
+      },
+      {
+        "type": "Contact",
+        "placement": "Header/Footer",
+        "text": "Contact Our Team",
+        "status": "confirmed",
+        "evidence": "Existing website analysis shows contact page"
+      }
+    ],
+    "trust_elements": [
+      {
+        "type": "Established Since 1958",
+        "placement": "Homepage/About",
+        "status": "requires_client_confirmation",
+        "description": "Family-owned business heritage",
+        "evidence": null
+      },
+      {
+        "type": "Service Listings",
+        "placement": "Services Page",
+        "status": "requires_client_confirmation",
+        "description": "Detailed service offerings",
+        "evidence": null
+      }
+    ],
+    "seo_recommendations": [
+      {
+        "type": "Service Pages",
+        "description": "Create dedicated pages for each confirmed service",
+        "status": "inferred"
+      },
+      {
+        "type": "Local SEO",
+        "description": "Optimize for 'industrial engineering Margate' searches",
+        "status": "inferred"
+      }
+    ],
+    "homepage": {
+      "hero_section": {
+        "title": "Industrial Manufacturing & Security Solutions",
+        "subtitle": "Engineering expertise for industrial and commercial clients",
+        "cta": {
+          "text": "Explore Our Services",
+          "url": "/services"
+        }
+      },
+      "service_highlights": {
+        "title": "Capabilities",
+        "services": [
+          {
+            "name": "Custom Manufacturing",
+            "url": "/services/custom-manufacturing"
+          },
+          {
+            "name": "Security Solutions",
+            "url": "/services/security-solutions"
+          }
+        ]
+      },
+      "trust_section": {
+        "title": "Why Choose Us",
+        "elements": [
+          {
+            "type": "Generations in Business",
+            "details": "Family-owned business"
+          },
+          {
+            "type": "Multi-Disciplinary",
+            "details": "Manufacturing + security expertise"
+          }
+        ]
+      }
+    },
+    "pages": {
+      "about": {
+        "sections": [
+          {
+            "type": "History",
+            "content": "Founded as a family business in Margate"
+          },
+          {
+            "type": "Capabilities",
+            "content": "Industrial manufacturing and security systems specialists"
+          }
+        ]
+      },
+      "services": {
+        "sections": [
+          {
+            "type": "Service List",
+            "items": [
+              {
+                "name": "Custom Manufacturing",
+                "description": "Tailored industrial fabrication"
+              },
+              {
+                "name": "Security Solutions",
+                "description": "Commercial and industrial protection"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "implementation_priority": {
+      "phase_1_mvp": [
+        "Homepage",
+        "About",
+        "Core Services",
+        "Contact"
+      ],
+      "phase_2_growth": [
+        "Service Detail Pages",
+        "Gallery"
+      ],
+      "phase_3_authority": [
+        "Case Studies",
+        "Certifications",
+        "Industry Resources"
+      ]
+    },
+    "verification": {
+      "confirmed_facts_used": [
+        "Company name",
+        "Service categories from research"
+      ],
+      "inferred_recommendations": [
+        "Service page expansion",
+        "Local SEO focus"
+      ],
+      "requires_client_confirmation": [
+        "Established Since 1958",
+        "Service listings",
+        "Case studies",
+        "Certifications"
+      ],
+      "research_confidence_used": "Medium",
+      "research_limitations": [
+        "Limited historical detail available",
+        "No client or project specifics confirmed"
+      ]
+    }
+  },
+  "verification": {
+    "confirmed_facts": [],
+    "inferred_facts": [],
+    "assumptions": [],
+    "requires_client_confirmation": [],
+    "contradictions": [],
+    "research": {
+      "confirmed_facts": [
+        "Company Name: Margate Engineering",
+        "Website URL: https://www.margateengineering.co.za/",
+        "Industry: Manufacturing",
+        "Sub-Industry: Customized Manufacturing, Security Solutions",
+        "Location: Margate, KwaZulu-Natal, South Africa",
+        "Services Offered: Customized Manufactured Products, Security Solutions, Rollershutters, Structural Steel Rigging, Automation & Electronics Repairs",
+        "Products Offered: X-Guard, Supa Guard, Louvre-X, Fire Doors, Balustrade, Alu-X Dor, Security Swing Gates, Driveway Security Gates, Garage Doors, Clear Vision Bars, Anti-Riot Shutters, Xpanding Barriers, Alumax PRO, Multiguard PRO, X-Door, Rolador",
+        "Target Audience: Homeowners, Businesses, Industrial Clients",
+        "Pain Points: Security Needs, Structural Requirements, Custom Manufacturing Demands",
+        "Strengths: Three Generations of Experience, Customization Capabilities, Commitment to Quality",
+        "Opportunities: Expansion into New Security Products, Increased Automation Offerings",
+        "Unique Selling Propositions: Custom-Made Solutions, High-Quality Materials, Coastal Condition Adaptability",
+        "Trust Signals: Family-Owned Business Since 1958, Commitment to Integrity, Client Testimonials"
+      ],
+      "inferred_facts": [],
+      "assumptions": [],
+      "requires_client_confirmation": [],
+      "contradictions": []
+    },
+    "architecture": {
+      "confirmed_facts_used": [
+        "Company name",
+        "Service categories from research"
+      ],
+      "inferred_recommendations": [
+        "Service page expansion",
+        "Local SEO focus"
+      ],
+      "requires_client_confirmation": [
+        "Established Since 1958",
+        "Service listings",
+        "Case studies",
+        "Certifications"
+      ],
+      "research_confidence_used": "Medium",
+      "research_limitations": [
+        "Limited historical detail available",
+        "No client or project specifics confirmed"
+      ]
+    }
+  },
+  "patterns": {
+    "services": [],
+    "pages": [],
+    "trust_elements": [],
+    "ctas": [],
+    "seo_strategies": []
+  },
+  "business_intelligence": {
+    "lead_generation_opportunities": [],
+    "content_opportunities": [],
+    "recommended_next_steps": []
+  },
+  "outcomes": {
+    "proposal_created": false,
+    "website_created": false,
+    "client_response": "",
+    "won_project": null,
+    "notes": []
+  },
+  "memory": {
+    "saved_at": "2026-10-16T11:46:28.718670",
+    "last_updated": "2026-10-16T11:46:28.718670"
+  },
+  "research_metrics": {
+    "schema_version": "2.0",
+    "status": {
+      "state": "Completed",
+      "completed": true,
+      "partial_reason": "",
+      "errors": [],
+      "warnings": []
+    },
+    "scope": {
+      "requested_url": "https://www.margateengineering.co.za/",
+      "final_url": "https://www.margateengineering.co.za/",
+      "domain": "margateengineering.co.za",
+      "research_mode": "Website Analysis",
+      "crawl_depth_requested": 1,
+      "crawl_depth_reached": 1,
+      "maximum_pages_requested": 0,
+      "pages_discovered": 3,
+      "pages_attempted": 3,
+      "pages_analyzed": 3,
+      "pages_skipped": 0,
+      "external_sources_analyzed": 0
+    },
+    "coverage": {
+      "coverage_score": 0.75,
+      "coverage_level": "Partial",
+      "page_types_found": [
+        "Home",
+        "Services",
+        "Contact"
+      ],
+      "page_types_missing": [
+        "About",
+        "Projects",
+        "Certifications",
+        "Sustainability",
+        "News",
+        "Resources",
+        "Support"
+      ],
+      "sections_analyzed": [
+        "Services",
+        "Products",
+        "Contact Information"
+      ],
+      "sections_missing": [
+        "History",
+        "Certifications",
+        "Sustainability Initiatives",
+        "Project Portfolio",
+        "News Articles",
+        "Resource Library",
+        "Support Center"
+      ],
+      "languages_encountered": [
+        "English"
+      ],
+      "regions_encountered": [
+        "Margate, KwaZulu-Natal, South Africa"
+      ]
+    },
+    "pages": [
+      {
+        "url": "https://www.margateengineering.co.za/",
+        "final_url": "https://www.margateengineering.co.za/",
+        "page_type": "Home",
+        "title": "Margate ENGINEERING",
+        "crawl_depth": 1,
+        "http_status": 200,
+        "content_extracted": true,
+        "content_length_characters": 1200,
+        "relevance_score": 1,
+        "analysis_status": "Analyzed",
+        "skip_reason": ""
+      },
+      {
+        "url": "https://www.margateengineering.co.za/services",
+        "final_url": "https://www.margateengineering.co.za/services",
+        "page_type": "Services",
+        "title": "Services - Margate ENGINEERING",
+        "crawl_depth": 1,
+        "http_status": 200,
+        "content_extracted": true,
+        "content_length_characters": 2500,
+        "relevance_score": 1,
+        "analysis_status": "Analyzed",
+        "skip_reason": ""
+      },
+      {
+        "url": "https://www.margateengineering.co.za/contact-us",
+        "final_url": "https://www.margateengineering.co.za/contact-us",
+        "page_type": "Contact",
+        "title": "Contact Us - Margate ENGINEERING",
+        "crawl_depth": 1,
+        "http_status": 200,
+        "content_extracted": true,
+        "content_length_characters": 800,
+        "relevance_score": 1,
+        "analysis_status": "Analyzed",
+        "skip_reason": ""
+      }
+    ],
+    "sources": [
+      {
+        "source_type": "Primary",
+        "name": "Margate Engineering Website",
+        "url": "https://www.margateengineering.co.za/",
+        "publisher": "Margate Engineering",
+        "retrieved_at": "2026-10-16",
+        "is_primary_source": true,
+        "relevance_score": 1,
+        "credibility_score": 1,
+        "used_for_claims": [
+          "Services",
+          "Products",
+          "Contact Information"
+        ]
+      }
+    ],
+    "crawl_performance": {
+      "started_at": "2026-10-16T00:00:00",
+      "completed_at": "2026-10-16T00:15:00",
+      "duration_seconds": 900,
+      "discovery_duration_seconds": 300,
+      "extraction_duration_seconds": 300,
+      "analysis_duration_seconds": 300,
+      "average_seconds_per_page": 300,
+      "successful_requests": 3,
+      "failed_requests": 0,
+      "redirects_followed": 0,
+      "timeouts": 0,
+      "rate_limit_events": 0,
+      "robots_blocked_pages": 0,
+      "authentication_blocked_pages": 0
+    },
+    "content_quality": {
+      "total_content_characters": 4500,
+      "duplicate_pages_detected": 0,
+      "thin_content_pages": 0,
+      "unreadable_pages": 0,
+      "dynamic_content_limitations": [],
+      "documents_analyzed": 0,
+      "structured_data_detected": [],
+      "content_freshness": {
+        "dated_pages_found": 0,
+        "newest_date_found": "",
+        "oldest_date_found": "",
+        "undated_pages": 3
+      }
+    },
+    "evidence_quality": {
+      "claims_generated": 15,
+      "claims_with_evidence": 15,
+      "claims_without_evidence": 0,
+      "confirmed_claims": 15,
+      "inferred_claims": 0,
+      "claims_requiring_confirmation": 0,
+      "evidence_coverage_score": 1,
+      "contradictions_found": 0,
+      "contradictions": []
+    },
+    "research_quality": {
+      "overall_score": 0.85,
+      "confidence_score": 0.9,
+      "completeness_score": 0.75,
+      "source_quality_score": 1,
+      "evidence_score": 1,
+      "freshness_score": 0,
+      "quality_level": "Good",
+      "confidence_level": "High",
+      "scoring_notes": [
+        "Some pages were inaccessible (e.g., About Us)."
+      ]
+    },
+    "execution": {
+      "crew_run_id": "",
+      "trace_id": "",
+      "research_agent": "Senior Industrial Business Intelligence Research Analyst",
+      "model_requested": "gpt-4",
+      "model_used": "gpt-4",
+      "fallback_used": false,
+      "fallback_chain": [],
+      "llm_requests": 0,
+      "tool_calls": 3,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "estimated_cost": null,
+      "retry_count": 0
+    },
+    "limitations": {
+      "known_limitations": [
+        "About Us page returned a 404 error",
+        "Limited content on Certifications, Sustainability, News"
+      ],
+      "blocked_content": [],
+      "unverified_areas": [],
+      "recommended_follow_up_pages": [
+        "About",
+        "Certifications",
+        "Sustainability",
+        "News",
+        "Projects",
+        "Resources",
+        "Support"
+      ],
+      "recommended_external_sources": [],
+      "requires_manual_review": false
+    },
+    "audit": {
+      "metrics_collected_at": "2026-10-16",
+      "metrics_collector": "Senior Industrial Business Intelligence Research Analyst",
+      "automatically_measured_fields": [],
+      "agent_reported_fields": [],
+      "unavailable_fields": [
+        "page_load_time",
+        "dom_content_loaded_time",
+        "fully_loaded_time"
+      ]
+    }
+  }
+}

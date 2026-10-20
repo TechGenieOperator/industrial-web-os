@@ -1,5 +1,54 @@
 {
-  "company_name": "Macsteel",
-  "industry": "Steel",
-  "saved_at": "2026-10-15T18:10:10.140720"
+  "metadata": {
+    "company_id": "macsteel",
+    "company_name": "Macsteel",
+    "website_url": "https://www.macsteel.co.za",
+    "industry": "Steel",
+    "sub_industry": "",
+    "date_analyzed": "2026-10-15T19:05:39.819731",
+    "version": "1.0"
+  },
+  "research": {
+    "services": [
+      "Steel Distribution",
+      "Fabrication"
+    ]
+  },
+  "website_analysis": {},
+  "architecture": {
+    "sitemap": [
+      "Home",
+      "Services",
+      "Projects",
+      "Contact"
+    ]
+  },
+  "verification": {
+    "confirmed_facts": [
+      "Company Name"
+    ]
+  },
+  "patterns": {
+    "services": [],
+    "pages": [],
+    "trust_elements": [],
+    "ctas": [],
+    "seo_strategies": []
+  },
+  "business_intelligence": {
+    "lead_generation_opportunities": [],
+    "content_opportunities": [],
+    "recommended_next_steps": []
+  },
+  "outcomes": {
+    "proposal_created": false,
+    "website_created": false,
+    "client_response": "",
+    "won_project": null,
+    "notes": []
+  },
+  "memory": {
+    "saved_at": "2026-10-15T19:05:39.819731",
+    "last_updated": "2026-10-15T19:05:39.819731"
+  }
 }

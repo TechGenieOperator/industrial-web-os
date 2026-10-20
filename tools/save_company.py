@@ -3,11 +3,71 @@ import os
 from datetime import datetime
 
 
-def save_company(data):
-    company_name = data.get("company_name", "unknown_company")
+def create_company_record(
+    company_name,
+    website_url="",
+    industry="",
+    research=None,
+    architecture=None,
+    verification=None,
+):
+    timestamp = datetime.utcnow().isoformat()
 
-    safe_name = (
-        company_name.lower()
+    return {
+        "metadata": {
+            "company_id": company_name.lower().replace(" ", "_"),
+            "company_name": company_name,
+            "website_url": website_url,
+            "industry": industry,
+            "sub_industry": "",
+            "date_analyzed": timestamp,
+            "version": "1.0"
+        },
+
+        "research": research or {},
+
+        "website_analysis": (
+            research.get("website_analysis", {})
+            if research else {}
+        ),
+
+        "architecture": architecture or {},
+
+        "verification": verification or {},
+
+        "patterns": {
+            "services": [],
+            "pages": [],
+            "trust_elements": [],
+            "ctas": [],
+            "seo_strategies": []
+        },
+
+        "business_intelligence": {
+            "lead_generation_opportunities": [],
+            "content_opportunities": [],
+            "recommended_next_steps": []
+        },
+
+        "outcomes": {
+            "proposal_created": False,
+            "website_created": False,
+            "client_response": "",
+            "won_project": None,
+            "notes": []
+        },
+
+        "memory": {
+            "saved_at": timestamp,
+            "last_updated": timestamp
+        }
+    }
+
+
+def save_company(record):
+    company_name = (
+        record["metadata"]["company_name"]
+        .lower()
         .replace(" ", "_")
         .replace("/", "_")
         .replace("\\", "_")
@@ -18,12 +78,10 @@ def save_company(data):
 
     output_path = os.path.join(
         output_dir,
-        f"{safe_name}.json"
+        f"{company_name}.json"
     )
 
-    data["saved_at"] = datetime.utcnow().isoformat()
-
     with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2)
+        json.dump(record, f, indent=2)
 
     return output_path
