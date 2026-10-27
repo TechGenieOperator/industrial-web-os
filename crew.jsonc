@@ -8,13 +8,83 @@
 
   "tasks": [
     {
-      "name": "research_company",
+      "name": "discover_company_pages",
 
-      "description": "Research {company_name} using {website_url} as the primary source. Follow the research-related structure defined in knowledge/schema/company_knowledge.json. Use the available research tools to examine the homepage and relevant accessible internal pages such as About, Services, Products, Industries, Projects, Resources, Support, Contact, Certifications, Sustainability, News, and other material pages discovered during research. Use public search only to identify relevant company pages or fill important gaps. Prioritize primary company sources over secondary sources. Record only pages and sources that were actually returned by the available tools. A page may only use analysis_status analyzed when usable content was successfully retrieved. If a page was discovered but could not be retrieved, record it as skipped, failed, or blocked and provide the reason. A missing, unavailable, blocked, failed, inaccessible, timed-out, or not-found page must never simultaneously be classified as analyzed. Before returning the final result, perform a consistency review across research_metrics.scope, research_metrics.coverage, research_metrics.pages, research_metrics.sources, research_metrics.limitations, website_analysis, and verification. Resolve contradictions before returning the answer. Confirmed facts must be traceable to at least one entry under research_metrics.sources. Use each source's used_for_claims array to identify the claims or claim categories it supports. The source record must provide the source URL, source name, source type, publisher when available, retrieval date, primary-source status, and supported claims. Do not invent source URLs, quotations, certifications, awards, customers, testimonials, projects, partnerships, locations, statistics, capabilities, dates, crawl activity, execution timing, HTTP statuses, content lengths, token usage, costs, model routing, fallback activity, retry counts, or tool-call counts. Automatically measured information that is unavailable must retain its default empty, zero, false, or null value and must be listed under research_metrics.audit.unavailable_fields. Do not claim that a metric was automatically measured unless code, the retrieval tool, CrewAI runtime output, or tracing actually supplied it. Separate confirmed facts, inferred facts, assumptions, contradictions, and information requiring client confirmation. Return only valid JSON without markdown, code fences, introduction, or commentary.",
+      "description": "Discover the small set of pages needed to research {company_name}. Begin with {website_url}. Inspect the homepage and identify only high-value company pages that materially contribute to business research, such as About, Services, Products, Industries, Projects, Contact, Certifications, Sustainability, Resources, Support, or News when those pages actually exist. Prioritize pages on the supplied company domain. Use public search only when necessary to discover important company pages that cannot be identified from the website. Do not perform full company analysis in this task. Do not broadly crawl product catalogs, pagination, archives, tags, search-result pages, duplicate URLs, legal boilerplate, or unrelated content. Select at most 8 high-value URLs including the homepage. Do not invent URLs.",
 
-      "expected_output": "Return one valid JSON object containing metadata, research, research_metrics, website_analysis, architecture, verification, patterns, business_intelligence, outcomes, and memory. Follow knowledge/schema/company_knowledge.json as the canonical structure. Populate the research-related sections and leave sections owned by later pipeline stages at their default values. metadata.company_name and metadata.website_url must be non-empty. research_metrics must contain status, scope, coverage, pages, sources, crawl_performance, content_quality, evidence_quality, research_quality, execution, limitations, and audit. Every research_metrics.pages entry must use exactly one analysis_status value: analyzed, skipped, failed, or blocked. Every confirmed fact must be supported by at least one entry in research_metrics.sources whose used_for_claims array identifies that fact or its claim category. Exact quotations are not required unless they were actually retrieved. Sources must not be invented. If evidence is insufficient, classify the information as inferred, assumed, or requiring client confirmation instead of confirmed. Automatically measured fields that were not measured must retain default values and be included under research_metrics.audit.unavailable_fields.",
+      "expected_output": "Return one valid JSON object containing company_name, website_url, discovered_pages, discovery_limitations, and discovery_notes. discovered_pages must contain at most 8 unique pages. Each page must contain url, page_type, source_of_discovery, priority, and reason_selected. Return only pages actually discovered through the available tools. Do not claim that page content was analyzed during this task unless usable content was actually retrieved. Return JSON only.",
 
       "agent": "industrial_business_research_a",
+
+      "output_file": "runs/latest/discovered_pages.json",
+
+      "create_directory": true,
+
+      "markdown": false,
+
+      "guardrails": [
+        "Return exactly one valid JSON object.",
+        "discovered_pages must contain no more than 8 unique URLs.",
+        "Do not invent URLs or claim discovery activity that did not occur.",
+        "Prioritize the supplied company website and high-value company-information pages.",
+        "Do not perform the final company analysis or populate company_knowledge.json during this task."
+      ],
+
+      "guardrail_max_retries": 1,
+
+      "human_input": false,
+
+      "async_execution": false
+    },
+
+    {
+      "name": "extract_company_evidence",
+
+      "description": "Using discover_company_pages as the page scope, retrieve and analyze only the selected pages needed to understand {company_name}. Extract concise evidence rather than reproducing full webpage text. For each successfully retrieved page, capture only schema-relevant company facts, important evidence, source metadata, and unresolved questions. Prioritize primary company evidence. Do not repeatedly retrieve the same URL. If a page cannot be retrieved, record the failure once with the available reason and continue. Use public search only when an important research gap cannot reasonably be resolved from the selected company pages. Do not create the complete company_knowledge.json in this task. The goal is to transform retrieved webpages into a compact evidence set that later tasks can consume without carrying unnecessary raw webpage content forward.",
+
+      "expected_output": "Return one valid JSON object containing company_name, website_url, retrieved_pages, failed_pages, evidence, sources, inferred_findings, contradictions, unknowns, requires_client_confirmation, limitations, and unavailable_metrics. retrieved_pages must identify pages from which usable content was actually retrieved. failed_pages must contain pages that were attempted but could not be retrieved and the available reason. evidence must contain concise schema-relevant facts rather than long page reproductions. sources must contain only genuine sources returned by available tools and should include URL, source name, source type, publisher when available, retrieval date when actually available, primary-source status, and used_for_claims. Do not invent automatically measured telemetry. Return JSON only.",
+
+      "agent": "industrial_business_research_a",
+
+      "context": [
+        "discover_company_pages"
+      ],
+
+      "output_file": "runs/latest/research_evidence.json",
+
+      "create_directory": true,
+
+      "markdown": false,
+
+      "guardrails": [
+        "Return exactly one valid JSON object.",
+        "Do not reproduce unnecessary full webpage content when concise evidence is sufficient.",
+        "A successfully retrieved page and a failed page must not contradict each other.",
+        "Do not repeatedly retrieve failed or already processed URLs merely to increase coverage.",
+        "Sources must correspond to evidence actually returned by available research tools.",
+        "Confirmed evidence must identify supporting sources through used_for_claims.",
+        "Never fabricate telemetry, URLs, quotations, customers, projects, certifications, awards, partnerships, locations, capabilities, statistics, dates, execution timing, HTTP statuses, content lengths, token usage, costs, model routing, fallback activity, retry counts, or tool-call counts."
+      ],
+
+      "guardrail_max_retries": 1,
+
+      "human_input": false,
+
+      "async_execution": false
+    },
+
+    {
+      "name": "research_company",
+
+      "description": "Using extract_company_evidence as the authoritative evidence set, construct the final research JSON for {company_name} according to knowledge/schema/company_knowledge.json. This task is primarily synthesis and verification. Do not restart broad website discovery or repeat retrieval that has already been completed. Use the evidence already collected wherever possible. Populate the research-owned portions of the canonical schema and leave portions owned by later pipeline stages at their required default values. Confirmed facts must be traceable to genuine source records through used_for_claims. Separate confirmed facts, inferred facts, assumptions, contradictions, unknown information, and information requiring client confirmation. Perform one final consistency review across research_metrics.scope, research_metrics.coverage, research_metrics.pages, research_metrics.sources, research_metrics.limitations, website_analysis, and verification. Resolve contradictions from existing evidence whenever possible rather than restarting research. Do not fabricate missing information or automatically measured telemetry.",
+
+      "expected_output": "Return one valid JSON object containing metadata, research, research_metrics, website_analysis, architecture, verification, patterns, business_intelligence, outcomes, and memory according to knowledge/schema/company_knowledge.json. metadata.company_name and metadata.website_url must be non-empty. Populate research-related sections from extract_company_evidence and leave later-stage sections at their required default values. research_metrics must include the canonical research fields required by the schema. Every research_metrics.pages entry must use one analysis_status value: analyzed, skipped, failed, or blocked. analyzed is valid only when usable content was retrieved. Every confirmed fact must be traceable to one or more genuine research_metrics.sources entries through used_for_claims. Automatically measured values unavailable from actual tools, code, CrewAI runtime output, or tracing must retain their default values and be added to research_metrics.audit.unavailable_fields when required. Return JSON only.",
+
+      "agent": "industrial_business_research_a",
+
+      "context": [
+        "extract_company_evidence"
+      ],
 
       "output_file": "runs/latest/research.json",
 
@@ -23,26 +93,21 @@
       "markdown": false,
 
       "guardrails": [
-        "The response must be one valid JSON object with no markdown, code fences, introduction, or commentary.",
-
-        "The output must follow the research-related structure in knowledge/schema/company_knowledge.json. metadata.company_name and metadata.website_url must be present and non-empty.",
-
-        "The output must be internally consistent. A page cannot simultaneously be analyzed and missing, analyzed and inaccessible, analyzed and blocked, analyzed and unavailable, analyzed and not found, or analyzed and failed. A page may use analysis_status analyzed only when usable page content was retrieved.",
-
-        "Confirmed facts must be traceable to research_metrics.sources through used_for_claims. A source may support an individual claim or a clearly named claim category such as company identity, services, products, industries served, production capabilities, company history, mission, values, contact details, or location. Do not require a quotation when no quotation was retrieved, but do require a genuine supporting source URL. If a claim is not supported by a listed source, move it to inferred_facts, assumptions, or requires_client_confirmation.",
-
-        "research_metrics.evidence_quality must agree with the actual verification and source records. claims_with_evidence cannot exceed the number of claims traceable through research_metrics.sources. confirmed_claims must not include unsupported claims.",
-
-        "Do not fabricate pages visited, sources, URLs, excerpts, certifications, customers, awards, testimonials, projects, partnerships, locations, capabilities, statistics, execution timing, HTTP statuses, content lengths, token usage, costs, model routing, fallbacks, retries, or tool-call counts.",
-
-        "Automatically measured metrics that are unavailable must retain their default empty, zero, false, or null values and must be listed under research_metrics.audit.unavailable_fields.",
-
-        "The verification section must clearly separate confirmed facts, inferred facts, assumptions, contradictions, and information requiring client confirmation.",
-
-        "Coverage and confidence must reflect the evidence actually collected. Limited page coverage must not be described as comprehensive research or assigned unjustifiably high confidence."
+        "Return exactly one valid JSON object with no markdown, code fences, introduction, or commentary.",
+        "Follow the research-related structure in knowledge/schema/company_knowledge.json.",
+        "metadata.company_name and metadata.website_url must be present and non-empty.",
+        "Do not restart broad discovery or unnecessarily repeat retrieval already represented in extract_company_evidence.",
+        "A page may use analysis_status analyzed only when usable page content was successfully retrieved.",
+        "A page cannot simultaneously be analyzed and unavailable, missing, inaccessible, blocked, failed, timed-out, not-found, or skipped.",
+        "Confirmed facts must be traceable to genuine research_metrics.sources entries through used_for_claims.",
+        "Unsupported information must be categorized as inferred, assumed, unknown, contradictory, or requiring client confirmation rather than confirmed.",
+        "Do not fabricate pages, sources, telemetry, URLs, quotations, certifications, customers, awards, testimonials, projects, partnerships, locations, capabilities, statistics, execution timing, HTTP statuses, content lengths, token usage, costs, model routing, fallback activity, retry counts, or tool-call counts.",
+        "Automatically measured metrics that are unavailable must retain their schema defaults and be listed under research_metrics.audit.unavailable_fields when required.",
+        "Coverage and confidence must reflect the evidence actually collected.",
+        "Perform one final consistency review before returning the result."
       ],
 
-      "guardrail_max_retries": 3,
+      "guardrail_max_retries": 1,
 
       "human_input": false,
 
@@ -52,9 +117,9 @@
     {
       "name": "create_website_architecture",
 
-      "description": "Using the completed JSON output from research_company as the authoritative company-specific source, create a complete evidence-driven B2B website architecture for {company_name}. Fully utilize verified research instead of applying a generic template. Every confirmed service must appear somewhere within the sitemap, navigation, homepage, service overview, service detail-page plan, content hierarchy, or implementation roadmap. Confirmed products must influence the architecture. When more than five products are confirmed, include a dedicated Products page recommendation. When more than ten products are confirmed, organize them into practical categories and recommend filtering or product discovery. Every confirmed trust signal must become a confirmed trust element supported by research evidence. Never downgrade a confirmed research fact to inferred or requires_client_confirmation without documenting a genuine contradiction. Every unique selling proposition must influence homepage messaging, value propositions, or trust sections. Every major target audience must have an appropriate message, content path, or conversion route. Research pain points must influence conversion messaging, CTAs, FAQs, resources, or supporting content. Research opportunities must influence growth-phase recommendations. Strategic recommendations are allowed, but must not be presented as existing company facts. Do not invent certifications, statistics, awards, project counts, customer counts, client names, safety metrics, offices, partnerships, testimonials, case studies, product availability, capabilities, performance claims, or achievements. Every trust element must use one status: confirmed, inferred, or requires_client_confirmation. Future case studies, brochures, resources, galleries, testimonials, certifications, calculators, downloads, and project portfolios must be marked requires_client_confirmation when research does not confirm that they currently exist. Adapt the architecture to the company's actual services, products, audiences, strengths, weaknesses, opportunities, research coverage, and confidence. Before returning the answer, verify that no confirmed service, product category, trust signal, USP, audience, pain point, opportunity, or commercially useful research finding was omitted without explanation. Return only valid JSON without markdown, code fences, introduction, or commentary.",
+      "description": "Using research_company as the authoritative company-specific evidence source, create an evidence-driven B2B website architecture for {company_name}. Use verified research rather than a generic template. Every commercially important confirmed service, meaningful product category, trust signal, USP, target audience, pain point, and opportunity should influence the architecture or be deliberately accounted for. Strategic recommendations are allowed but must remain distinct from existing company facts. When more than five products are confirmed, recommend a dedicated Products page. When more than ten products are confirmed, organize them into practical categories and recommend appropriate product discovery. Do not invent certifications, statistics, awards, project counts, customer counts, client names, safety metrics, offices, partnerships, testimonials, case studies, product availability, capabilities, performance claims, or achievements. Proposed future assets must be identified as recommendations or requires_client_confirmation rather than existing facts. Before finalizing, confirm that commercially useful verified research has either been mapped into the architecture or deliberately documented as omitted.",
 
-      "expected_output": "Return one valid JSON object containing sitemap, navigation, cta_strategy, trust_elements, seo_recommendations, homepage, pages, implementation_priority, research_utilization, and verification. Sitemap entries must contain url, title, description, status, and evidence. CTA entries must contain type, placement, text, url, status, and evidence. Every trust element must contain type, placement, status, description, and evidence. Confirmed items must reference supporting research. Evidence must be null when direct supporting evidence is unavailable. The homepage must contain hero_section, service_highlights, product_highlights when products exist, trust_section, audience_paths, value_propositions, supporting_content, and final_cta. The pages object must include every page justified by the research. implementation_priority must contain phase_1_mvp, phase_2_growth, and phase_3_authority. research_utilization must contain services_mapped, products_mapped, trust_signals_mapped, usps_mapped, audiences_mapped, pain_points_mapped, opportunities_mapped, and omitted_research_items. verification must contain confirmed_facts_used, inferred_recommendations, assumptions, requires_client_confirmation, research_confidence_used, and research_limitations.",
+      "expected_output": "Return one valid JSON object containing sitemap, navigation, cta_strategy, trust_elements, seo_recommendations, homepage, pages, implementation_priority, research_utilization, and verification. Sitemap entries must contain url, title, description, status, and evidence. CTA entries must contain type, placement, text, url, status, and evidence. Trust elements must contain type, placement, status, description, and evidence. Confirmed items must reference supporting research. Evidence must be null when direct supporting evidence is unavailable. The homepage must contain hero_section, service_highlights, product_highlights when products exist, trust_section, audience_paths, value_propositions, supporting_content, and final_cta. The pages object must contain pages justified by research or clearly identified strategic recommendations. implementation_priority must contain phase_1_mvp, phase_2_growth, and phase_3_authority. research_utilization must account for services, products, trust signals, USPs, audiences, pain points, opportunities, and deliberately omitted research items. verification must distinguish confirmed facts, inferred recommendations, assumptions, requires_client_confirmation, research confidence, and limitations.",
 
       "agent": "industrial_website_architect",
 
@@ -69,26 +134,20 @@
       "markdown": false,
 
       "guardrails": [
-        "The response must be one valid JSON object with no markdown, code fences, introduction, or commentary.",
-
-        "The architecture must be based on research_company and must not introduce factual company claims absent from the research.",
-
-        "Every confirmed service must be represented somewhere within the architecture. Confirmed products must influence the architecture. If more than five products are confirmed, include a dedicated Products page recommendation.",
-
-        "Every trust element must use exactly one status: confirmed, inferred, or requires_client_confirmation. Confirmed trust elements must have supporting research evidence.",
-
-        "A confirmed research fact must not be downgraded to inferred or requires_client_confirmation unless verification documents a genuine contradiction.",
-
-        "Unsupported certifications, testimonials, customers, awards, statistics, projects, partnerships, locations, capabilities, and achievements must be marked requires_client_confirmation.",
-
-        "Proposed resources, downloads, case studies, galleries, calculators, and content assets must not be presented as existing company assets unless the research confirms them.",
-
-        "research_utilization must account for mapped services, products, trust signals, USPs, audiences, pain points, opportunities, and deliberately omitted research items.",
-
+        "Return exactly one valid JSON object with no markdown, code fences, introduction, or commentary.",
+        "The architecture must rely on research_company for company-specific factual claims.",
+        "Every commercially important confirmed service must be represented or deliberately accounted for.",
+        "Confirmed products must influence architecture where commercially relevant.",
+        "Every trust element must use exactly one status: confirmed, inferred, or requires_client_confirmation.",
+        "Confirmed trust elements require supporting research evidence.",
+        "A confirmed research fact must not be downgraded without a genuine documented contradiction.",
+        "Unsupported certifications, testimonials, customers, awards, statistics, projects, partnerships, locations, capabilities, and achievements must not be represented as confirmed facts.",
+        "Proposed resources, downloads, case studies, galleries, calculators, and content assets must not be represented as existing assets unless research confirms them.",
+        "research_utilization must account for commercially relevant research items.",
         "verification must clearly separate confirmed facts, inferred recommendations, assumptions, limitations, and items requiring client confirmation."
       ],
 
-      "guardrail_max_retries": 3,
+      "guardrail_max_retries": 1,
 
       "human_input": false,
 
@@ -104,7 +163,7 @@
 
   "cache": true,
 
-  "max_rpm": 20,
+  "max_rpm": 10,
 
   "output_log_file": "runs/latest/crew_log.json",
 
